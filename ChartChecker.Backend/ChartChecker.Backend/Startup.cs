@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ChartChecker.Backend.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using System;
+using System.IO;
 
 namespace ChartChecker.Backend
 {
@@ -39,16 +35,15 @@ namespace ChartChecker.Backend
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            var connectionUrl = Configuration.GetValue<string>("Environment:Url");
+
+            services.AddDbContext<ChartCheckerDbContext>(options => options.UseSqlServer(Configuration.GetValue<string>("Database:ConnectionString")), ServiceLifetime.Transient);
 
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
-
                 builder
+                .AllowAnyOrigin()
                 .AllowAnyMethod()
-                .AllowAnyHeader()
-                .WithOrigins(connectionUrl)
-                .AllowCredentials();
+                .AllowAnyHeader();
             }));
         }
 
@@ -64,6 +59,7 @@ namespace ChartChecker.Backend
                 app.UseHsts();
             }
 
+            app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();
         }

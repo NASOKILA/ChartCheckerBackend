@@ -1,0 +1,12 @@
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\bin\Debug\netcoreapp2.1\ChartChecker.Backend.Data.deps.json
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\bin\Debug\netcoreapp2.1\ChartChecker.Backend.Data.dll
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\bin\Debug\netcoreapp2.1\ChartChecker.Backend.Data.pdb
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\bin\Debug\netcoreapp2.1\ChartChecker.Backend.Models.dll
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\bin\Debug\netcoreapp2.1\ChartChecker.Backend.Models.pdb
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\obj\Debug\netcoreapp2.1\ChartChecker.Backend.Data.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\obj\Debug\netcoreapp2.1\ChartChecker.Backend.Data.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\obj\Debug\netcoreapp2.1\ChartChecker.Backend.Data.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\obj\Debug\netcoreapp2.1\ChartChecker.Backend.Data.AssemblyInfo.cs
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\obj\Debug\netcoreapp2.1\ChartChecker.Backend.Data.csproj.CopyComplete
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\obj\Debug\netcoreapp2.1\ChartChecker.Backend.Data.dll
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend.Data\obj\Debug\netcoreapp2.1\ChartChecker.Backend.Data.pdb
