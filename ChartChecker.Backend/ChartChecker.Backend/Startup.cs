@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using ChartChecker.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -30,12 +32,13 @@ namespace ChartChecker.Backend
                 .AddEnvironmentVariables();
 
             Configuration = builder.Build();
+            
+            //string dbConnectionString = Configuration.GetValue<string>("Database:ConnectionString");
 
-
-            //DbContextOptionsBuilder<FrontendDBContext> options = new DbContextOptionsBuilder<FrontendDBContext>();
-            //DataSeeder.SeedData(new FrontendDBContext(
-            //    options.UseSqlServer(Configuration.GetValue<string>("Database:ConnectionString")).Options
-            //));
+            //DbContextOptionsBuilder<ChartCheckerDbContext> options = new DbContextOptionsBuilder<ChartCheckerDbContext>();
+            //new ChartCheckerDbContext(
+            //    options.UseSqlServer(dbConnectionString).Options
+            //);
         }
 
         public IConfiguration Configuration { get; }

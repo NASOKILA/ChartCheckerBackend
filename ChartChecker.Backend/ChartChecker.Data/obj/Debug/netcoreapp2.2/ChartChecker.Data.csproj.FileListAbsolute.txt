@@ -1,0 +1,6 @@
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Data.deps.json
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Data.dll
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.csprojAssemblyReference.cache
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.csproj.CoreCompileInputs.cache
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.AssemblyInfoInputs.cache
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.AssemblyInfo.cs
