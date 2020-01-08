@@ -30,6 +30,12 @@ namespace ChartChecker.Backend
                 .AddEnvironmentVariables();
 
             Configuration = builder.Build();
+
+
+            //DbContextOptionsBuilder<FrontendDBContext> options = new DbContextOptionsBuilder<FrontendDBContext>();
+            //DataSeeder.SeedData(new FrontendDBContext(
+            //    options.UseSqlServer(Configuration.GetValue<string>("Database:ConnectionString")).Options
+            //));
         }
 
         public IConfiguration Configuration { get; }
@@ -38,17 +44,13 @@ namespace ChartChecker.Backend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            var connectionUrl = Configuration.GetValue<string>("Environment:Url");
-
+            
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
-
                 builder
+                .AllowAnyOrigin()
                 .AllowAnyMethod()
-                .AllowAnyHeader()
-                .WithOrigins(connectionUrl)
-                .AllowCredentials();
+                .AllowAnyHeader();
             }));
         }
 
@@ -64,6 +66,7 @@ namespace ChartChecker.Backend
                 app.UseHsts();
             }
 
+            app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();
         }

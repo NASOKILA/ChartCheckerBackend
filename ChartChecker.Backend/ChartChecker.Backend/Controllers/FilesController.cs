@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using ChartChecker.Backend.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChartChecker.Backend.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("CorsPolicy")]
     [ApiController]
     public class FilesController : ControllerBase
     {
