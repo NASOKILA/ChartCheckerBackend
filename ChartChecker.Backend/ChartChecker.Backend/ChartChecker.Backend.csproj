@@ -1,19 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <UserSecretsId>b774b79c-91cc-4e4c-831d-f51d0dea5a08</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DbModels\" />
-    <Folder Include="wwwroot\" />
+    <Compile Remove="DbModels\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="DbModels\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="DbModels\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="DbModels\**" />
+    <None Remove="wwwroot\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.4.10" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
