@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using ChartChecker.Backend.Models;
+using ChartChecker.Data;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,13 @@ namespace ChartChecker.Backend.Controllers
     [ApiController]
     public class FilesController : ControllerBase
     {
+        private ChartCheckerDbContext _db;
+
+        public FilesController(ChartCheckerDbContext db)
+        {
+            _db = db;
+        }
+
         // GET api/forms
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

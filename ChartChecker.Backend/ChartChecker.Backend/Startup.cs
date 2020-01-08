@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using ChartChecker.Data;
+﻿using ChartChecker.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using System;
+using System.IO;
 
 namespace ChartChecker.Backend
 {
@@ -32,13 +26,12 @@ namespace ChartChecker.Backend
                 .AddEnvironmentVariables();
 
             Configuration = builder.Build();
-            
-            //string dbConnectionString = Configuration.GetValue<string>("Database:ConnectionString");
 
-            //DbContextOptionsBuilder<ChartCheckerDbContext> options = new DbContextOptionsBuilder<ChartCheckerDbContext>();
-            //new ChartCheckerDbContext(
-            //    options.UseSqlServer(dbConnectionString).Options
-            //);
+            string dbConnectionString = Configuration.GetValue<string>("Database:ConnectionString");
+
+            DbContextOptionsBuilder<ChartCheckerDbContext> options = new DbContextOptionsBuilder<ChartCheckerDbContext>();
+            options.UseSqlServer(dbConnectionString);
+
         }
 
         public IConfiguration Configuration { get; }
@@ -47,7 +40,7 @@ namespace ChartChecker.Backend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            
+
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
                 builder
@@ -55,6 +48,9 @@ namespace ChartChecker.Backend
                 .AllowAnyMethod()
                 .AllowAnyHeader();
             }));
+
+            services.AddDbContext<ChartCheckerDbContext>(options => options.UseSqlServer(Configuration.GetValue<string>("Database:ConnectionString")), ServiceLifetime.Transient);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
