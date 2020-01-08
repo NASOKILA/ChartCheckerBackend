@@ -12,3 +12,8 @@ C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartCh
 C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\obj\Debug\netcoreapp2.2\ChartChecker.Backend.RazorTargetAssemblyInfo.cache
 C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\obj\Debug\netcoreapp2.2\ChartChecker.Backend.dll
 C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\obj\Debug\netcoreapp2.2\ChartChecker.Backend.pdb
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\bin\Debug\netcoreapp2.2\ChartChecker.Data.dll
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\bin\Debug\netcoreapp2.2\ChartChecker.Models.dll
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\bin\Debug\netcoreapp2.2\ChartChecker.Data.pdb
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\bin\Debug\netcoreapp2.2\ChartChecker.Models.pdb
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\obj\Debug\netcoreapp2.2\ChartChecker.Backend.csproj.CopyComplete

@@ -1,0 +1,9 @@
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\bin\Debug\netcoreapp2.2\ChartChecker.Models.deps.json
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\bin\Debug\netcoreapp2.2\ChartChecker.Models.dll
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\bin\Debug\netcoreapp2.2\ChartChecker.Models.pdb
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.csprojAssemblyReference.cache
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.csproj.CoreCompileInputs.cache
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.AssemblyInfoInputs.cache
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.AssemblyInfo.cs
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.dll
+C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.pdb
