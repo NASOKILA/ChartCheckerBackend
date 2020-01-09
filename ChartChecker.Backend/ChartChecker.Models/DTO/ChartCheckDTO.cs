@@ -11,7 +11,7 @@ namespace ChartChecker.Models.DTO
         public string ChartType { get; set; }
 
         public string ImagePath { get; set; }
-
+        
         public DateTime EventDateTime { get; set; }
     }
 }

@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using ChartChecker.Backend.Models;
-using ChartChecker.Data;
+﻿using ChartChecker.Data;
 using ChartChecker.Models.Database;
 using ChartChecker.Models.DTO;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace ChartChecker.Backend.Controllers
 {
@@ -15,10 +17,13 @@ namespace ChartChecker.Backend.Controllers
     [ApiController]
     public class FilesController : ControllerBase
     {
+        private readonly IHostingEnvironment _hostingEnvironment;
+
         private ChartCheckerDbContext _db;
 
-        public FilesController(ChartCheckerDbContext db)
+        public FilesController(ChartCheckerDbContext db, IHostingEnvironment hostingEnvironment)
         {
+            _hostingEnvironment = hostingEnvironment;
             _db = db;
         }
 
@@ -28,36 +33,63 @@ namespace ChartChecker.Backend.Controllers
         {
             return new string[] { "files1", "files2" };
         }
-        
+
         // POST api/forms
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] ChartCheckDTO chartCheckDTO)
         {
-            if (!ModelState.IsValid) {
+            if (!ModelState.IsValid)
+            {
                 return BadRequest();
             }
-
-            this.SaveImageToServer();
-
 
             var newChartCheck = new ChartCheck
             {
                 ChartType = chartCheckDTO.ChartType,
-                EventDateTime = chartCheckDTO.EventDateTime,
                 StoreName = chartCheckDTO.StoreName,
-                UserEmail = chartCheckDTO.UserEmail
+                UserEmail = chartCheckDTO.UserEmail,
+                ImagePath = chartCheckDTO.ImagePath,
+                EventDateTime = chartCheckDTO.EventDateTime
             };
 
             await _db.ChartChecks.AddAsync(newChartCheck);
 
             await _db.SaveChangesAsync();
 
+            Console.WriteLine("Database updated.");
+
             return Ok(newChartCheck);
         }
 
-        private void SaveImageToServer()
+        [HttpPost("UploadImage")]
+        public async Task<IActionResult> Post(IFormFile file)
         {
-            Console.WriteLine("Save image to server!");
+            Console.WriteLine("File received.");
+
+            string filePath = string.Empty;
+
+            try
+            {
+                string projectPath = _hostingEnvironment.ContentRootPath;
+
+                int randNum = new Random().Next(0, 100000);
+
+                filePath = Path.Combine(Path.GetFullPath("Images"), randNum + file.FileName);
+                
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+                
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+
+            Console.WriteLine("File saved.");
+
+            return Ok(new { imagePath = filePath });
         }
     }
 }
