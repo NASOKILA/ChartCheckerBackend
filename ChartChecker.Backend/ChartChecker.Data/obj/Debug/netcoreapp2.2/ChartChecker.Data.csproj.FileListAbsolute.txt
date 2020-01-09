@@ -10,3 +10,15 @@ C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartCh
 C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.csproj.CopyComplete
 C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.dll
 C:\Users\atana\OneDrive\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.pdb
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Data.deps.json
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Data.dll
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Data.pdb
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Models.dll
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Models.pdb
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.AssemblyInfo.cs
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.csproj.CopyComplete
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.dll
+C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.pdb
