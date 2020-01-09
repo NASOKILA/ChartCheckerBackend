@@ -58,6 +58,21 @@ namespace ChartChecker.Backend.Controllers
 
             Console.WriteLine("Database updated.");
 
+
+
+
+
+            //get top 40
+
+
+            //get visionrwsults
+
+
+            //compare
+
+
+            //results
+
             return Ok(newChartCheck);
         }
 
