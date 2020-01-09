@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using ChartChecker.Backend.Models;
 using ChartChecker.Data;
+using ChartChecker.Models.Database;
+using ChartChecker.Models.DTO;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,14 +26,38 @@ namespace ChartChecker.Backend.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "forms1", "forms2" };
+            return new string[] { "files1", "files2" };
         }
         
         // POST api/forms
         [HttpPost]
-        public string Post([FromBody] Example reqModel)
+        public async Task<IActionResult> Post([FromBody] ChartCheckDTO chartCheckDTO)
         {
-            return reqModel.Name;
+            if (!ModelState.IsValid) {
+                return BadRequest();
+            }
+
+            this.SaveImageToServer();
+
+
+            var newChartCheck = new ChartCheck
+            {
+                ChartType = chartCheckDTO.ChartType,
+                EventDateTime = chartCheckDTO.EventDateTime,
+                StoreName = chartCheckDTO.StoreName,
+                UserEmail = chartCheckDTO.UserEmail
+            };
+
+            await _db.ChartChecks.AddAsync(newChartCheck);
+
+            await _db.SaveChangesAsync();
+
+            return Ok(newChartCheck);
+        }
+
+        private void SaveImageToServer()
+        {
+            Console.WriteLine("Save image to server!");
         }
     }
 }
