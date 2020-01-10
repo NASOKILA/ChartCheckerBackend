@@ -62,3 +62,5 @@ C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\Ch
 C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\obj\Debug\netcoreapp2.2\ChartChecker.Backend.csproj.CopyComplete
 C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\obj\Debug\netcoreapp2.2\ChartChecker.Backend.dll
 C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\obj\Debug\netcoreapp2.2\ChartChecker.Backend.pdb
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\bin\Debug\netcoreapp2.2\SwapOneAndFive.json
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Backend\bin\Debug\netcoreapp2.2\topFortyOrderedSongs.json
