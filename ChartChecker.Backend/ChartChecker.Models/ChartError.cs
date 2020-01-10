@@ -1,6 +1,6 @@
 ﻿namespace ChartChecker.Models
 {
-    public class ErrorList
+    public class ChartError
     {
         public int CurrentPosition { get; set; }
 

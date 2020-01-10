@@ -75,7 +75,7 @@ namespace ChartChecker.Backend.Controllers
 
             List<SingleRecordDTO> singlesRecordsList = JsonConvert.DeserializeObject<List<SingleRecordDTO>>(currentTopFortyRecords);
 
-            List<ErrorList> errorsList = new List<ErrorList>();
+            List<ChartError> chartErrorsList = new List<ChartError>();
             
             foreach (var resultItem in swapOneAndFiveVisionResults)
             {
@@ -83,17 +83,21 @@ namespace ChartChecker.Backend.Controllers
                 if (resultItem.Name != top40ItemByPosition.Name)
                 {
                     //Error exists
-
+                    ChartError chartError = new ChartError();
                     //Get element from top 40 by name and get its position to populate the errorList if it exists, add it to the error else add a resuklt message
                     var top40ItemByResultItemName = singlesRecordsList.FirstOrDefault(r => r.Name == resultItem.Name);
 
                     if (top40ItemByResultItemName == null)
                     {
                         //Record does not exist in the chart
-                        
+                    }
+                    else {
+                        //Record exist in the chart
+                        //chartError.Artist = result
                     }
 
-                    //errorsList.Add()
+                    chartErrorsList.Add(chartError);
+
                 }   
             }
 
