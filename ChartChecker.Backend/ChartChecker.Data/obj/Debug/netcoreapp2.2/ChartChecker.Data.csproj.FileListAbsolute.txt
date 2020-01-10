@@ -22,3 +22,14 @@ C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data
 C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.csproj.CopyComplete
 C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.dll
 C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.pdb
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Data.deps.json
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Data.dll
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Data.pdb
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Models.dll
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\bin\Debug\netcoreapp2.2\ChartChecker.Models.pdb
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.csprojAssemblyReference.cache
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.AssemblyInfoInputs.cache
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.AssemblyInfo.cs
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.csproj.CopyComplete
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.dll
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Data\obj\Debug\netcoreapp2.2\ChartChecker.Data.pdb
