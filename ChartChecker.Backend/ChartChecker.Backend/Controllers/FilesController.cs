@@ -1,22 +1,21 @@
-﻿using ChartChecker.Data;
+﻿using ChartChecker.Backend.Models;
+using ChartChecker.Data;
+using ChartChecker.Models;
 using ChartChecker.Models.Database;
 using ChartChecker.Models.DTO;
+using ChartChecker.Models.Enums;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
-using Newtonsoft;
-using Newtonsoft.Json;
 using System.Linq;
-using ChartChecker.Models;
-using ChartChecker.Models.Enums;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using ChartChecker.Backend.Models;
+using System.Threading.Tasks;
 
 namespace ChartChecker.Backend.Controllers
 {

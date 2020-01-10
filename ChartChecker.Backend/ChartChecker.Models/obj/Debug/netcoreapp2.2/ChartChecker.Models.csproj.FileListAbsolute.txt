@@ -16,3 +16,10 @@ C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Mode
 C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.AssemblyInfo.cs
 C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.dll
 C:\Users\Asus\Desktop\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.pdb
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\bin\Debug\netcoreapp2.2\ChartChecker.Models.deps.json
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\bin\Debug\netcoreapp2.2\ChartChecker.Models.dll
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\bin\Debug\netcoreapp2.2\ChartChecker.Models.pdb
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.AssemblyInfoInputs.cache
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.AssemblyInfo.cs
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.dll
+C:\Users\Joshu\Source\Repos\NASOKILA\ChartCheckerBackend\ChartChecker.Backend\ChartChecker.Models\obj\Debug\netcoreapp2.2\ChartChecker.Models.pdb
