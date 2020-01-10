@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="SwapOneAndFive.json" />
+    <None Include="SwapOneToFiveAndElevenToSixteen.json" />
     <None Include="topFortyOrderedSongs.json" />
   </ItemGroup>
 

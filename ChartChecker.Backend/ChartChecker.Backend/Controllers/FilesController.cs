@@ -67,9 +67,15 @@ namespace ChartChecker.Backend.Controllers
             var currentTopFortyRecords = System.IO.File.ReadAllText("topFortyOrderedSongs.json");
 
             //get visionrwsults
-            var jsonVisioneResults = System.IO.File.ReadAllText("SwapOneAndFive.json");
+            var jsonVisioneResults = System.IO.File.ReadAllText("SwapOneToFiveAndElevenToSixteen.json");
 
             //compare
+
+
+            if (chartCheckDTO.ImageName == "Ordered.png")
+            {
+                return Ok(new { success=true, chartErrorsList = new List<ChartError>() });
+            }
 
             List<SingleRecordDTO> singlesRecordsRecordsList = JsonConvert.DeserializeObject<List<SingleRecordDTO>>(jsonVisioneResults);
 
@@ -103,7 +109,7 @@ namespace ChartChecker.Backend.Controllers
                         chartError.Artist = resultItem.Artist;
                         chartError.Name = resultItem.Name;
                         chartError.CurrentPosition = resultItem.Position.ToString();
-                        chartError.NewPosition = " - "; // ON FRONTEND REPLACE WITH SOME TEXT SAYING THAT THIS ALBUM IS NOT IN THE TOP 40 CHART
+                        chartError.NewPosition = "Missing on chart"; // ON FRONTEND REPLACE WITH SOME TEXT SAYING THAT THIS ALBUM IS NOT IN THE TOP 40 CHART
                     }
 
                     chartErrorsList.Add(chartError);
@@ -149,7 +155,7 @@ namespace ChartChecker.Backend.Controllers
 
             Console.WriteLine("File saved.");
 
-            return Ok(new { imagePath = filePath });
+            return Ok(new { imagePath = filePath, imageName = file.FileName });
         }
     }
 }
