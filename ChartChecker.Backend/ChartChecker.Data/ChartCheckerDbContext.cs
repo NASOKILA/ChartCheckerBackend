@@ -14,6 +14,8 @@ namespace ChartChecker.Data
 
         public virtual DbSet<ChartCheck> ChartChecks { get; set; }
 
+        public virtual DbSet<SingleRecord> SingleRecords { get; set; }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 

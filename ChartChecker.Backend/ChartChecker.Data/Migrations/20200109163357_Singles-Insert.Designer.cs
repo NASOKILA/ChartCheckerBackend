@@ -4,14 +4,16 @@ using ChartChecker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ChartChecker.Data.Migrations
 {
     [DbContext(typeof(ChartCheckerDbContext))]
-    partial class ChartCheckerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200109163357_Singles-Insert")]
+    partial class SinglesInsert
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
