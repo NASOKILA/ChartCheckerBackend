@@ -43,6 +43,24 @@ namespace ChartChecker.Data.Migrations
 
                     b.ToTable("ChartChecks");
                 });
+
+            modelBuilder.Entity("ChartChecker.Models.Database.ChartData", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("ChartDate");
+
+                    b.Property<int>("ChartType");
+
+                    b.Property<string>("Data")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ChartData");
+                });
 #pragma warning restore 612, 618
         }
     }
