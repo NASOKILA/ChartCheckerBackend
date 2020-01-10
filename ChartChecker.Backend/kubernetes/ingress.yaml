@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: chartchecker
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: frontend
+              servicePort: 60000
+          - path: /discounted
+            backend:
+              serviceName: my-discounted-products
+              servicePort: 80
