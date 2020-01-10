@@ -9,6 +9,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using Newtonsoft;
+using Newtonsoft.Json;
+using System.Linq;
+using ChartChecker.Models;
 
 namespace ChartChecker.Backend.Controllers
 {
@@ -58,22 +62,49 @@ namespace ChartChecker.Backend.Controllers
 
             Console.WriteLine("Database updated.");
 
-
-
-
-
+            
             //get top 40
-
+            var currentTopFortyRecords = System.IO.File.ReadAllText("topFortyOrderedSongs.json");
 
             //get visionrwsults
-
+            var myJsonVisioneResults = System.IO.File.ReadAllText("topFortyOrderedSongs.json");
 
             //compare
+
+            List<SingleRecordDTO> swapOneAndFiveVisionResults = JsonConvert.DeserializeObject<List<SingleRecordDTO>>(currentTopFortyRecords);
+
+            List<SingleRecordDTO> singlesRecordsList = JsonConvert.DeserializeObject<List<SingleRecordDTO>>(currentTopFortyRecords);
+
+            List<ChartError> chartErrorsList = new List<ChartError>();
+            
+            foreach (var resultItem in swapOneAndFiveVisionResults)
+            {
+                var top40ItemByPosition = singlesRecordsList.FirstOrDefault(r => r.Position == resultItem.Position);
+                if (resultItem.Name != top40ItemByPosition.Name)
+                {
+                    //Error exists
+                    ChartError chartError = new ChartError();
+                    //Get element from top 40 by name and get its position to populate the errorList if it exists, add it to the error else add a resuklt message
+                    var top40ItemByResultItemName = singlesRecordsList.FirstOrDefault(r => r.Name == resultItem.Name);
+
+                    if (top40ItemByResultItemName == null)
+                    {
+                        //Record does not exist in the chart
+                    }
+                    else {
+                        //Record exist in the chart
+                        //chartError.Artist = result
+                    }
+
+                    chartErrorsList.Add(chartError);
+
+                }   
+            }
 
 
             //results
 
-            return Ok(newChartCheck);
+            return Ok(new { success = true, newChartCheck = newChartCheck });
         }
 
         [HttpPost("UploadImage")]
