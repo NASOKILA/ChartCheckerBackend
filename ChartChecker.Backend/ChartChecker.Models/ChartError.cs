@@ -2,9 +2,9 @@
 {
     public class ChartError
     {
-        public int CurrentPosition { get; set; }
+        public string CurrentPosition { get; set; }
 
-        public int NewPosition { get; set; }
+        public string NewPosition { get; set; }
 
         public string Name { get; set; }
 

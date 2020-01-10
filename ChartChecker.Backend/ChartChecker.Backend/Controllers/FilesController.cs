@@ -67,44 +67,58 @@ namespace ChartChecker.Backend.Controllers
             var currentTopFortyRecords = System.IO.File.ReadAllText("topFortyOrderedSongs.json");
 
             //get visionrwsults
-            var myJsonVisioneResults = System.IO.File.ReadAllText("topFortyOrderedSongs.json");
+            var jsonVisioneResults = System.IO.File.ReadAllText("SwapOneAndFive.json");
 
             //compare
 
-            List<SingleRecordDTO> swapOneAndFiveVisionResults = JsonConvert.DeserializeObject<List<SingleRecordDTO>>(currentTopFortyRecords);
+            List<SingleRecordDTO> singlesRecordsRecordsList = JsonConvert.DeserializeObject<List<SingleRecordDTO>>(jsonVisioneResults);
 
-            List<SingleRecordDTO> singlesRecordsList = JsonConvert.DeserializeObject<List<SingleRecordDTO>>(currentTopFortyRecords);
+            List<SingleRecordDTO> currentTopFortyRecordsParsed = JsonConvert.DeserializeObject<List<SingleRecordDTO>>(currentTopFortyRecords);
 
             List<ChartError> chartErrorsList = new List<ChartError>();
             
-            foreach (var resultItem in swapOneAndFiveVisionResults)
+            foreach (var resultItem in singlesRecordsRecordsList)
             {
-                var top40ItemByPosition = singlesRecordsList.FirstOrDefault(r => r.Position == resultItem.Position);
+                var top40ItemByPosition = currentTopFortyRecordsParsed.FirstOrDefault(r => r.Position == resultItem.Position);
+
                 if (resultItem.Name != top40ItemByPosition.Name)
                 {
                     //Error exists
+                    
                     ChartError chartError = new ChartError();
-                    //Get element from top 40 by name and get its position to populate the errorList if it exists, add it to the error else add a resuklt message
-                    var top40ItemByResultItemName = singlesRecordsList.FirstOrDefault(r => r.Name == resultItem.Name);
 
-                    if (top40ItemByResultItemName == null)
+                    //Get element from top 40 by name and get its position to populate the errorList
+                    var top40ItemByResultItemName = currentTopFortyRecordsParsed.FirstOrDefault(r => r.Name == resultItem.Name);
+
+                    if (top40ItemByResultItemName != null)
                     {
-                        //Record does not exist in the chart
+                        //Record exist in the chart
+                        chartError.Artist = resultItem.Artist;
+                        chartError.Name = resultItem.Name;
+                        chartError.CurrentPosition = resultItem.Position.ToString();
+                        chartError.NewPosition = top40ItemByResultItemName.Position.ToString();
                     }
                     else {
-                        //Record exist in the chart
-                        //chartError.Artist = result
+                        //Record does not exist in the chart
+                        chartError.Artist = resultItem.Artist;
+                        chartError.Name = resultItem.Name;
+                        chartError.CurrentPosition = resultItem.Position.ToString();
+                        chartError.NewPosition = " - "; // ON FRONTEND REPLACE WITH SOME TEXT SAYING THAT THIS ALBUM IS NOT IN THE TOP 40 CHART
                     }
 
                     chartErrorsList.Add(chartError);
-
                 }   
             }
 
 
             //results
 
-            return Ok(new { success = true, newChartCheck = newChartCheck });
+            bool success = false;
+            if (chartErrorsList.Count < 1) {
+                success = true;
+            }
+
+            return Ok(new { success, chartErrorsList });
         }
 
         [HttpPost("UploadImage")]
