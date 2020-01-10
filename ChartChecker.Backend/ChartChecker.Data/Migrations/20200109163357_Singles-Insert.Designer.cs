@@ -4,18 +4,20 @@ using ChartChecker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ChartChecker.Data.Migrations
 {
     [DbContext(typeof(ChartCheckerDbContext))]
-    partial class ChartCheckerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200109163357_Singles-Insert")]
+    partial class SinglesInsert
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
+                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -42,24 +44,6 @@ namespace ChartChecker.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ChartChecks");
-                });
-
-            modelBuilder.Entity("ChartChecker.Models.Database.ChartData", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("ChartDate");
-
-                    b.Property<int>("ChartType");
-
-                    b.Property<string>("Data")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ChartData");
                 });
 
             modelBuilder.Entity("ChartChecker.Models.Database.SingleRecord", b =>
